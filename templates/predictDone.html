@@ -1,0 +1,15 @@
+<link rel="icon" href="/static/Image/1.ico" type="image/x-icon" xmlns:text-align="http://www.w3.org/1999/xhtml">
+{% extends "mainPage.html" %}
+{% block predictDone %}
+    <div style="position: absolute;left: 225px;top: calc(60px + 10%);width: calc(100% - 225px); height: 15%">
+        <h1 style="text-align: center;font-size: xxx-large"><b>预测完成!</b></h1>
+    </div>
+    <div style="position: absolute;left: 225px;top: calc(60px + 20%);width: calc(100% - 225px); height: 20%">
+        <h4 style="text-align: center">预测结果: 在<b> {{ timeSet }} </b>时<b> {{ position }} </b>的交通流量为 <b>{{ data }}</b></h4>
+    </div>
+
+    <div style="position: absolute;left: 225px;top: calc(60px + 30%);width: calc(100% - 225px); height: 50%">
+        <h2 style="text-align: center">全天交通流量折线图</h2>
+        <img src="{{ url_for('static',filename=imagePath) }}" style="position: absolute;left: 50%;transform: translateX(-50%);width: 65%">
+    </div>
+{% endblock %}

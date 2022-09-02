@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <link rel="icon" href="/static/Image/1.ico" type="image/x-icon">
+    <link href="/static/CSS/HomeStyle.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="Image" style="height:100%; width:25%; position:absolute;left:0;top:0">
+        <img src="{{ url_for('static',filename="./Image/4.jpg") }}" style="height:100%; width:100%; overflow-y: hidden">
+    </div>
+    <div class="Image" style="height:100%; width:25%; position:absolute;left:25%;top:0">
+        <img src="{{ url_for('static',filename="./Image/2.jpg") }}" style="height:100%; width:100%; overflow-y: hidden">
+    </div>
+    <div class="Image" style="height:100%; width:25%; position:absolute;left:50%;top:0">
+        <img src="{{ url_for('static',filename="./Image/1.jpg") }}" style="height:100%; width:100%; overflow-y: hidden">
+    </div>
+    <div class="Image" style="height:100%; width:25%; position:absolute;left:75%;top:0">
+        <img src="{{ url_for('static',filename="./Image/3.jpg") }}" style="height:100%; width:100%; overflow-y: hidden">
+    </div>
+
+    <div class="bg-Shallow" style="height:100%;width:100%;top:0;left:0;position:absolute;background-color:rgba(0,0,0,0.5)">
+        <div class="Title" style="left:50%;transform:translateX(-50%);top:40%;position:absolute">
+            <h1 style="color:#fff;letter-spacing:3px;font-size:xx-large">基于时空知识图谱的交通流量预测系统</h1>
+        </div>
+    </div>
+
+    <div style="position:absolute;left:50%;transform:translateX(-50%);top:55%">
+        <a href="{{ url_for('predictTrainPage') }}"><input type="submit" value="开始使用" style="width:120px;height:50px;font-size:x-large;border-radius:50px;
+        background-color:#F0F8FF;cursor:pointer"></a>
+    </div>
+</body>
+</html>

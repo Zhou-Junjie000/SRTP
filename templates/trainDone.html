@@ -1,0 +1,25 @@
+<link rel="icon" href="/static/Image/1.ico" type="image/x-icon" xmlns:text-align="http://www.w3.org/1999/xhtml">
+{% extends "mainPage.html" %}
+{% block trainDone %}
+    <div style="position:absolute; left: 225px;top: calc(60px + 10%);width: calc(100% - 225px);height: 20%">
+        <h1 style="text-align: center; letter-spacing: 2px; font-size: xxx-large"><b>模型训练完成!</b></h1>
+    </div>
+    <div style="position: absolute; left: 225px;top: calc(60px + 40%);width: calc(100% - 225px);height: 20%">
+        <h3 style="text-align: center; letter-spacing: 2px; font-size: large"><b>训练数据集:</b> {{ trainSet }}</h3>
+    </div>
+    <div style="position: absolute; left: 225px;top: calc(60px + 45%);width: calc(100% - 225px);height: 20%">
+        <h3 style="text-align: center; letter-spacing: 2px; font-size: large"><b>算法:</b> {{ algorithm }}</h3>
+    </div>
+    <div style="position: absolute; left: 225px;top: calc(60px + 50%);width: calc(100% - 225px);height: 20%">
+        <h3 style="text-align: center; letter-spacing: 2px; font-size: large"><b>激活函数:</b> {{ activationFun }}</h3>
+    </div>
+    <div style="position: absolute; left: 225px;top: calc(60px + 55%);width: calc(100% - 225px);height: 20%">
+        <h3 style="text-align: center; letter-spacing: 2px; font-size: large"><b>训练用时:</b> {{ time }} s</h3>
+    </div>
+    <a href="{{ url_for('predictPage') }}">
+        <button type="submit" class="btn btn-primary btn-lg"
+                style="position: absolute;left: calc(50% + 112.5px); top: calc(60px + 70%);transform: translateX(-50%)">
+            点击进行预测
+        </button>
+    </a>
+{% endblock %}
